@@ -1,11 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+    
+  <!--introductions-->
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
+    <template>I have no answer for that. Try typing something again.</template>
   </category>
+  
   <category>
-    <pattern>Hi!</pattern>
-    <template>Hello Humanoid!</template>
+    <pattern>HELLO</pattern>
+    <template>Hello! What is your name?</template>
+  </category>
+  
+  <category>
+     <pattern>HI</pattern>
+     <template><srai>Hello</srai></template>
+  </category>
+  
+  <category>
+   <that>WHAT IS YOUR NAME</that>
+   <pattern>*</pattern>
+    <template>Hey <set name = "first-name"><star/></set>! Are you a Computer 
+    Science Undergraduate Student?</template>
+  </category>
+
+  <!--Handling students type of major-->
+  <category>
+      <that>ARE YOU A COMPUTER SCIENCE UNDERGRADUATE STUDENT</that>
+      <pattern>NO</pattern>
+      <template>Sorry <get name = "first-name"/>, I will not be able to assist 
+      you</template>
+  </category>
+  
+  <category>
+      <that>ARE YOU A COMPUTER SCIENCE UNDERGRADUATE STUDENT</that>
+      <pattern>YES</pattern>
+      <template>Awesome! Do you prefer pictures or reading?
+      </template>
+  </category>
+  
+  <!--Rescource preference-->
+  <category>
+      <that>DO YOU PREFER PICTURES OR READING</that>
+      <pattern>PICTURES</pattern>
+      <template>ok here are some pictures </template>
+  </category>
+  
+  <category>
+      <that>DO YOU PREFER PICTURES OR READING</that>
+      <pattern>READING</pattern>
+      <template>Okay, please choose which one of these statements best 
+      describes you.</template>
+  </category>
+
+  <!--word options-->
+  <category>
+      <that>DO YOU PREFER PICTURES OR READING</that>
+      <pattern>READING</pattern>
+      <template>ok here are some words</template>
   </category>
 </aiml>
