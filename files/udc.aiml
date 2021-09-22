@@ -32,31 +32,70 @@
       you</template>
   </category>
   
+  <!--carousel with job cards-->
   <category>
       <that>ARE YOU A COMPUTER SCIENCE UNDERGRADUATE STUDENT</that>
       <pattern>YES</pattern>
-      <template>Awesome! Do you prefer pictures or reading?
+      <template>Awesome! please select which one of these cards best 
+      describes you.
+      <carousel>
+      <card>
+          <title> Does this describe you?</title>
+          <image>https://i.ibb.co/gjH2h1k/cybersecurity.jpg</image>
+          <subtitle> I like making and keeping data safe. </subtitle>
+          <button>
+              <text>Learn more about Cyber Security!</text>
+              <url>xmoreabout foo</url>
+          </button>
+      </card>
+      <card>
+          <title> Does this describe you?</title>
+          <image>https://i.ibb.co/2qk4Y3D/machinelearning.jpg</image>
+          <subtitle> I like teaching computers to do make their own decisions.
+          </subtitle>
+          <button>
+              <text>Learn more about Machine learning!</text>
+              <url>xmoreabout foo</url>
+          </button>
+      </card>
+      <card>
+          <title> Does this describe you?</title>
+          <image>https://i.ibb.co/1ZFbCRy/swe.jpg</image>
+          <subtitle> I like developing awesome web and mobile software.
+          </subtitle>
+          <button>
+              <text>Learn more about Software Engineering!</text>
+              <url>xmoreabout foo</url>
+          </button>
+      </card>
+      <card>
+          <title> Does this describe you?</title>
+          <image>https://i.ibb.co/0pLpfLS/networking.jpg</image>
+          <subtitle> I like fixing and maintaing networks. </subtitle>
+          <button>
+              <text>Learn more about Network Engineering!</text>
+              <url>xmoreabout foo</url>
+          </button>
+      </card>
+      <card>
+          <title> Does this describe you?</title>
+          <image>https://i.ibb.co/9s0wmRn/webdev.jpg</image>
+          <subtitle> I like designing captivating apps and websites. </subtitle>
+          <button>
+              <text>Learn more about User Design!</text>
+              <url>xmoreabout foo</url>
+          </button>
+      </card>
+      </carousel>
       </template>
   </category>
   
-  <!--Rescource preference-->
-  <category>
-      <that>DO YOU PREFER PICTURES OR READING</that>
-      <pattern>PICTURES</pattern>
-      <template>ok here are some pictures </template>
-  </category>
+  <!-- card preference and extra resources-->
+ 
+  <!--<category>-->
+  <!--    <that>PLEASE SELECT WHICH ONE OF THESE CARDS BEST DESCRIBES YOU</that>-->
+  <!--    <pattern>READING</pattern>-->
+      
+  <!--</category>-->
   
-  <category>
-      <that>DO YOU PREFER PICTURES OR READING</that>
-      <pattern>READING</pattern>
-      <template>Okay, please choose which one of these statements best 
-      describes you.</template>
-  </category>
-
-  <!--word options-->
-  <category>
-      <that>DO YOU PREFER PICTURES OR READING</that>
-      <pattern>READING</pattern>
-      <template>ok here are some words</template>
-  </category>
-</aiml>
+  </aiml>
