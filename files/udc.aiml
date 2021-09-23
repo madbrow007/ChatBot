@@ -36,66 +36,176 @@
   <category>
       <that>ARE YOU A COMPUTER SCIENCE UNDERGRADUATE STUDENT</that>
       <pattern>YES</pattern>
-      <template>Awesome! please select which one of these cards best 
-      describes you.
-      <carousel>
-      <card>
-          <title> Does this describe you?</title>
-          <image>https://i.ibb.co/gjH2h1k/cybersecurity.jpg</image>
-          <subtitle> I like making and keeping data safe. </subtitle>
-          <button>
-              <text>Learn more about Cyber Security!</text>
-              <url>xmoreabout foo</url>
-          </button>
-      </card>
-      <card>
-          <title> Does this describe you?</title>
-          <image>https://i.ibb.co/2qk4Y3D/machinelearning.jpg</image>
-          <subtitle> I like teaching computers to do make their own decisions.
-          </subtitle>
-          <button>
-              <text>Learn more about Machine learning!</text>
-              <url>xmoreabout foo</url>
-          </button>
-      </card>
-      <card>
-          <title> Does this describe you?</title>
-          <image>https://i.ibb.co/1ZFbCRy/swe.jpg</image>
-          <subtitle> I like developing awesome web and mobile software.
-          </subtitle>
-          <button>
-              <text>Learn more about Software Engineering!</text>
-              <url>xmoreabout foo</url>
-          </button>
-      </card>
-      <card>
-          <title> Does this describe you?</title>
-          <image>https://i.ibb.co/0pLpfLS/networking.jpg</image>
-          <subtitle> I like fixing and maintaing networks. </subtitle>
-          <button>
-              <text>Learn more about Network Engineering!</text>
-              <url>xmoreabout foo</url>
-          </button>
-      </card>
-      <card>
-          <title> Does this describe you?</title>
-          <image>https://i.ibb.co/9s0wmRn/webdev.jpg</image>
-          <subtitle> I like designing captivating apps and websites. </subtitle>
-          <button>
-              <text>Learn more about User Design!</text>
-              <url>xmoreabout foo</url>
-          </button>
-      </card>
-      </carousel>
+      <template>
+          <srai>CARD CAROUSEL</srai>
+      </template>
+  </category>
+
+  <category>
+      <pattern>CARD CAROUSEL</pattern>
+      <template>
+         <carousel>
+          <card>
+              <title> Does this describe you?</title>
+              <image>https://i.ibb.co/gjH2h1k/cybersecurity.jpg</image>
+              <subtitle> I like making and keeping data safe. </subtitle>
+              <button>
+                  <text>Click to discover what career might right for you!</text>
+                  <postback>SECURITY</postback>
+              </button>
+          </card>
+          <card>
+              <title> Does this describe you?</title>
+              <image>https://i.ibb.co/2qk4Y3D/machinelearning.jpg</image>
+              <subtitle> I like teaching computers to make their own decisions.
+              </subtitle>
+              <button>
+                  <text>Click to discover what career might right for you!</text>
+                  <postback>ML</postback>
+              </button>
+          </card>
+          <card>
+              <title> Does this describe you?</title>
+              <image>https://i.ibb.co/1ZFbCRy/swe.jpg</image>
+              <subtitle> I like developing web and mobile software.
+              </subtitle>
+              <button>
+                  <text>Click to discover what career might right for you!</text>
+                  <postback>SWE</postback>
+              </button>
+          </card>
+          <card>
+              <title> Does this describe you?</title>
+              <image>https://i.ibb.co/0pLpfLS/networking.jpg</image>
+              <subtitle> I like fixing and maintaing networks. </subtitle>
+              <button>
+                  <text>Click to discover what career might right for you!</text>
+                  <postback>NETWORK</postback>
+              </button>
+          </card>
+          <card>
+              <title> Does this describe you?</title>
+              <image>https://i.ibb.co/9s0wmRn/webdev.jpg</image>
+              <subtitle> I like designing captivating apps and websites. </subtitle>
+              <button>
+                  <text>Click to discover what career might right for you!</text>
+                  <postback>USER DESIGN</postback>
+              </button>
+          </card>
+          </carousel>
+          Awesome! Click to learn more about which of these descriptions best
+          describes you.
+      </template>
+    </category>
+    
+  <!--learn more about the career-->
+   <category>
+      <pattern>USER DESIGN</pattern>
+      <template><get name = "first-name"/>, User Design might be a great 
+      fit for you!
+      <link>
+          <text>Click here to learn more about User Design</text>
+          <url>https://www.wgu.edu/blog/what-ux-design2012.html</url>
+      </link>
+      <button>
+          <text>View More Careers</text>
+          <postback>View More Careers</postback>
+      </button>
+      <button>
+          <text>I'm Done</text>
+          <postback>I AM DONE</postback>
+      </button>
       </template>
   </category>
   
-  <!-- card preference and extra resources-->
- 
-  <!--<category>-->
-  <!--    <that>PLEASE SELECT WHICH ONE OF THESE CARDS BEST DESCRIBES YOU</that>-->
-  <!--    <pattern>READING</pattern>-->
-      
-  <!--</category>-->
+  <category>
+      <pattern>NETWORK</pattern>
+      <template><get name = "first-name"/>, Networking Engineering might be a 
+      great fit for you!
+      <link>
+          <text>Click here to learn more about Networking Engineering</text>
+          <url>https://www.wgu.edu/blog/what-network-engineer2011.html</url>
+      </link>
+      <button>
+          <text>View More Careers</text>
+          <postback>View More Careers</postback>
+      </button>
+      <button>
+          <text>I'm Done</text>
+          <postback>I AM DONE</postback>
+      </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>SWE</pattern>
+      <template><get name = "first-name"/>, Software Development might be a 
+      great fit for you!
+      <link>
+          <text>Click here to learn more about Software Development</text>
+          <url>https://www.wgu.edu/career-guide/information-technology/software-developer-career.html</url>
+      </link>
+      <button>
+          <text>View More Careers</text>
+          <postback>View More Careers</postback>
+      </button>
+      <button>
+          <text>I'm Done</text>
+          <postback>I AM DONE</postback>
+      </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>ML</pattern>
+      <template><get name = "first-name"/>, Machine Learning might be a great 
+      fit for you!
+      <link>
+          <text>Click here to learn more about Machine Learning</text>
+          <url>https://www.wgu.edu/blog/machine-learning-jobs2006.html</url>
+      </link>
+      <button>
+          <text>View More Careers</text>
+          <postback>View More Careers</postback>
+      </button>
+      <button>
+          <text>I'm Done</text>
+          <postback>I AM DONE</postback>
+      </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>SECURITY</pattern>
+      <template><get name = "first-name"/>, Cyber Security might be a great 
+      fit for you!
+      <link>
+          <text>Click here to learn more about Cyber Security</text>
+          <url>https://www.wgu.edu/blog/faqs-about-cyber-security-jobs1810.html</url>
+      </link>
+      <button>
+          <text>View More Careers</text>
+          <postback>View More Careers</postback>
+      </button>
+      <button>
+          <text>I'm Done</text>
+          <postback>I AM DONE</postback>
+      </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>VIEW MORE CAREERS</pattern>
+      <template> 
+      <srai>CARD CAROUSEL</srai>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>I AM DONE</pattern>
+      <template>I hope that helped you <get name = "first-name"/>!
+      Goodbye!
+      </template>
+  </category>
   
   </aiml>
